@@ -1,0 +1,19 @@
+apply plugin: 'war'
+apply plugin: 'eclipse'
+
+webAppDirName= 'WebContent'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile group:'org.apache.logging.log4j', name:'log4j-api', version:'2.8.2'
+    compile group:'org.apache.logging.log4j', name:'log4j-core', version:'2.8.2'
+    // compile group: 'org.glassfish.jersey.containers', name: 'jersey-container-servlet', version: '2.25.1'
+    compileOnly group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.0'
+
+    // compile 'org.slf4j:slf4j-api:1.7.25'
+
+    testCompile 'junit:junit:4.12'
+}
